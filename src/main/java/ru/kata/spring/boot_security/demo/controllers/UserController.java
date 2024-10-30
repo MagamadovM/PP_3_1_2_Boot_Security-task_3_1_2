@@ -23,11 +23,13 @@ public class UserController {
         this.userService = userService;
         this.roleService = roleService;
     }
+
     @GetMapping(value = "/user")
     public String getHome(@AuthenticationPrincipal User activeUser, Model model) {
         model.addAttribute("roles", activeUser.getRoleSet());
         return "home_page";
     }
+
     @GetMapping(value = "/user/{id}")
     public String getUserById(@PathVariable("id") int id, Model model) {
         User user = userService.getById(id);

@@ -32,7 +32,7 @@ public class AdminUserInitializer {
             Role adminRole = roleRepository.findByName("ROLE_ADMIN")
                     .orElseGet(() -> roleRepository.save(new Role(1L, "ROLE_ADMIN")));
             roleRepository.findByName("ROLE_USER")
-                    .orElseGet(() -> roleRepository.save(new Role(2L,"ROLE_USER")));
+                    .orElseGet(() -> roleRepository.save(new Role(2L, "ROLE_USER")));
 
             User admin = new User();
             admin.setName("Admin");

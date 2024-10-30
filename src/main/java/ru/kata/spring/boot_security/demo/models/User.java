@@ -58,6 +58,7 @@ public class User implements UserDetails {
         return lastName;
     }
 
+
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
